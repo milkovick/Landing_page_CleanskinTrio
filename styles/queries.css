@@ -1,0 +1,354 @@
+/* BELOW 1344px (Smaller desktops) */
+@media (max-width: 84em) {
+  .footer-grid-container {
+    column-gap: 5rem;
+  }
+  .importance-list {
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+  .journey-card {
+    padding: 3rem;
+  }
+}
+
+/* BELOW 1200px (Small Laptop/Landscape Tablets) */
+@media (max-width: 75em) {
+  html {
+    /* 9px/16px = 0.5625 = 56.25% */
+    font-size: 9px;
+  }
+}
+
+/* BELOW 1136px (Landscape Tablets) */
+@media (max-width: 71em) {
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+    width: 75%;
+    margin: 0 auto 8rem auto;
+  }
+  .ourstory-text {
+    width: 90%;
+  }
+  .importance-list {
+    width: fit-content;
+    font-size: 1.4rem;
+    gap: 1rem;
+    padding: 0;
+  }
+  .journey-card {
+    padding: 2.3rem;
+  }
+  .footer {
+    padding: 5rem 1rem 5rem 8rem;
+  }
+  .header-container {
+    margin-left: 6%;
+  }
+}
+
+/* BELOW 1008px (Landscape Tablets) */
+@media (max-width: 63em) {
+  .header-container-main-txt {
+    font-size: 5rem;
+  }
+  .small-txt-header {
+    font-size: 1.6rem;
+  }
+  .header {
+    margin-bottom: 10rem;
+  }
+  .cta-btn-free:link,
+  .cta-btn-free:visited {
+    font-size: 1.6rem;
+  }
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .illustration-svg {
+    max-width: 18rem;
+    max-height: 14rem;
+  }
+  .water-background.margin-top-big {
+    margin-top: 8rem;
+    padding: 10rem 5rem;
+  }
+}
+
+/* BELOW 900px (Tablets) */
+@media (max-width: 56.25em) {
+  .small-break-text .small-philosophy-section {
+    font-size: 18px;
+    margin: 3rem;
+  }
+  .header {
+    background-image: none;
+    background-color: #acc8e59b;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
+    height: auto;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .header-container-main-txt {
+    color: #11192c;
+    margin-top: 5.2rem;
+  }
+  .mobile-edited-header-img {
+    content: url(/images/imgpeople/headermodelsmaller.jpg);
+    width: 100%;
+    margin-bottom: 10rem;
+  }
+  .cta-btn:link,
+  .cta-btn:visited {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+  }
+  .header-cta-btns {
+    flex-direction: row;
+    gap: 1.8rem;
+    align-items: flex-start;
+  }
+  .hidden-form {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+  }
+  .close-form-btn {
+    right: 4.7rem;
+  }
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+  }
+  .enter-click {
+    display: none;
+  }
+  .ourstory-text {
+    width: 100%;
+  }
+  .ourstory-img {
+    align-self: center;
+  }
+  .importance-list {
+    width: 100%;
+  }
+  .grid--3-cols {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .disclaimer-text {
+    margin-bottom: 10rem;
+  }
+  .disclaimer-par {
+    font-size: 1.5rem;
+    margin: 0 5rem;
+  }
+  .comp-logo img {
+    height: 2.7rem;
+  }
+  .companies {
+    margin: 4rem auto 8rem auto;
+  }
+  .consultation-fill-form input::placeholder,
+  .consultation-fill-form select {
+    font-size: 1.4rem;
+  }
+  .footer input#mail {
+    width: 20rem;
+  }
+  .footer button#submit {
+    font-size: 1.5rem;
+  }
+
+  /*** MOBILE NAVIGATION ***/
+  .btn-mobile-nav {
+    display: block;
+    background-color: transparent;
+    position: fixed;
+    top: 2em;
+    margin-bottom: 2em;
+  }
+  .main-nav {
+    background-color: rgba(240, 232, 232, 0.384);
+    backdrop-filter: blur(2.2px);
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-100%); /* mobile nav will slide in from left*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .nav-open .main-nav {
+    /*Seting all back to normal - for open navigation */
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* For displaying the X icon (to close mobile navigation bar) - this will ONLY BE DISPLAYED when the NAVIGATION BAR IS OPEN!*/
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  /*For hiding the navigation bar icon (when the navigation is open). Instead of navigation bar icon, now the X icon will show up! */
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 8rem;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    font-size: 3rem;
+    color: #11192c;
+    background-color: #f3f0ff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+}
+
+/* BELOW 680px (Small Tablets/Phones) */
+@media (max-width: 42.5em) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+  .ourstory-text {
+    max-width: 70vw;
+  }
+  .importance-list {
+    width: 80%;
+    align-self: center;
+  }
+  .small-break-section {
+    margin: -5rem 2rem 2rem 2rem;
+  }
+  .small-break-text {
+    font-size: 1.9rem;
+  }
+  .grid--3-cols {
+    width: 100%;
+  }
+  .product-img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .product-btn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .comp-logo img {
+    height: 2rem;
+  }
+  .consultation-fill-form {
+    grid-template-columns: 1fr;
+  }
+  .footer input#mail {
+    width: 15rem;
+  }
+  .footer button#submit {
+    font-size: 1.2rem;
+  }
+}
+
+/* BELOW 640px (Huge Phones) */
+@media (max-width: 40em) {
+  html {
+    font-size: 8px;
+  }
+  .product-btn {
+    font-size: 0.8rem;
+  }
+}
+
+/* BELOW 511px (Phones) */
+@media (max-width: 31.94em) {
+  .importance-list {
+    width: 100%;
+  }
+  .small-break-text {
+    font-size: 1.7rem;
+  }
+  .grid--3-cols {
+    grid-template-columns: 1fr;
+  }
+  .product-img {
+    width: 25rem;
+    height: 25rem;
+  }
+  .footer {
+    padding: 3rem;
+  }
+}
+
+/* BELOW 460px (Medium Phones) */
+@media (max-width: 28.75em) {
+  .importance-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .comp-logo img {
+    height: 1.5rem;
+  }
+  .grid--2-cols-form {
+    max-width: 100%;
+    overflow: auto;
+  }
+  .consultation-form-text-box {
+    padding: 4rem;
+  }
+  .consultation-form .section-heading {
+    font-size: 2rem;
+  }
+  .form-text {
+    font-size: 1.2rem;
+  }
+  .footer {
+    padding: 5rem;
+  }
+  .footer-grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-heading {
+    font-size: 3.5rem;
+  }
+}
+
+/* BELOW 400px (Medium Phones) */
+@media (max-width: 25em) {
+  html {
+    font-size: 7.5px;
+  }
+  .water-background {
+    padding: 10rem 5rem;
+  }
+}
+
+/* BELOW 360px (Small Phones) */
+@media (max-width: 22.5em) {
+  html {
+    font-size: 6.5px;
+  }
+  .cta-btn.cta-btn-free {
+    font-size: 1.4rem;
+  }
+}
